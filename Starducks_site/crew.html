@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flight Crew — Starducks</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="js/app.js"></script>
+  <script defer src="js/crew.js"></script>
+</head>
+<body class="theme-galaxy">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="grain"></div>
+  <header class="site-header simple">
+    <a class="logo" href="index.html"><img src="assets/logo.svg" alt="Starducks"></a>
+    <nav class="top-nav">
+      <a class="btn ghost" href="post.html">New Post</a>
+      <a class="btn ghost" href="profile.html">Profile</a>
+    </nav>
+  </header>
+
+  <main class="container narrow">
+    <h1 class="heading">Flight Crew Access</h1>
+    <div id="crewGate" class="card">
+      <p>You need access to contribute. Enter your crew code.</p>
+      <form id="crewCodeForm" class="inline-form">
+        <input type="password" name="code" placeholder="Crew code" minlength="4" required>
+        <button class="btn solid">Unlock</button>
+      </form>
+      <p class="tiny muted">Note: You must be signed in. If you enter the correct code, you’ll receive a badge and tools to post.</p>
+    </div>
+
+    <div id="crewTools" class="card" hidden>
+      <h2 class="subheading">Crew Tools</h2>
+      <ul class="bullets">
+        <li>Post stories & artwork</li>
+        <li>Edit / delete your posts</li>
+        <li>Choose your country and profile picture</li>
+      </ul>
+      <div class="row gap-12 mt-12">
+        <a class="btn outline" href="post.html">Create a Post</a>
+        <a class="btn ghost" href="profile.html">Profile & Country</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <small class="credit">Design by Uefa Chankarn</small>
+  </footer>
+</body>
+</html>

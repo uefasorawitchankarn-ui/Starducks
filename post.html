@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>New Post — Starducks</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="js/app.js"></script>
+  <script defer src="js/post.js"></script>
+</head>
+<body class="theme-galaxy">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="grain"></div>
+  <header class="site-header simple">
+    <a class="logo" href="index.html"><img src="assets/logo.svg" alt="Starducks"></a>
+    <nav class="top-nav">
+      <a class="btn ghost" href="feed.html">Back to Feed</a>
+    </nav>
+  </header>
+
+  <main class="container narrow">
+    <h1 class="heading">Create Post</h1>
+    <div id="postGate" class="card">
+      <p>Flight Crew only. Enter crew code to post.</p>
+      <form id="postCodeForm" class="inline-form">
+        <input type="password" name="code" placeholder="Crew code" minlength="4" required>
+        <button class="btn solid">Continue</button>
+      </form>
+    </div>
+
+    <div id="postEditorWrap" hidden>
+      <div class="card">
+        <label class="muted">Title</label>
+        <input id="postTitle" class="title-input" placeholder="Post title (optional)">
+        <label class="muted mt-12">Content</label>
+        <div id="postEditor" class="editor" contenteditable="true" spellcheck="true"
+             data-placeholder="Type freely here... (any language is welcome)"></div>
+
+        <div class="editor-tools">
+          <input type="url" id="imageUrl" placeholder="Add image by URL (https://...)">
+          <button id="addImageBtn" class="btn outline">Add image</button>
+          <label class="upload">
+            <input type="file" id="uploadImageInput" accept="image/*" hidden>
+            <span class="btn ghost">Upload image</span>
+          </label>
+        </div>
+
+        <div class="row gap-12 mt-16">
+          <button id="publishBtn" class="btn solid">Publish</button>
+          <a class="btn ghost" href="feed.html">Cancel</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <small class="credit">Design by Uefa Chankarn</small>
+  </footer>
+</body>
+</html>

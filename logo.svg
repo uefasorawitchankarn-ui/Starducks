@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="52" viewBox="0 0 280 52">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#c8d8ff" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#g)" stroke="#ffffff22" stroke-width="0.5">
+    <path d="M12 40 L2 24 L12 8 L24 8 L34 24 L24 40 Z" opacity="0.8"/>
+    <text x="50" y="36" font-size="28" font-family="Georgia, serif" letter-spacing="2">STARDUCKS</text>
+  </g>
+</svg>

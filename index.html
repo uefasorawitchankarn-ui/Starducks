@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Starducks — Vintage Galaxy Journal</title>
+  <meta name="description" content="Starducks: a vintage-galaxy art journal with a Flight Crew for curated posts." />
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="preload" href="assets/fonts/Alagard.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="js/app.js"></script>
+  <script defer src="js/stars.js"></script>
+  <script defer src="js/home.js"></script>
+</head>
+<body class="theme-galaxy">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="grain"></div>
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Starducks home">
+      <img src="assets/logo.svg" alt="Starducks" />
+      <span class="sr-only">Starducks</span>
+    </a>
+    <nav class="top-nav">
+      <a class="btn ghost" href="login.html" id="joinTop">Join</a>
+      <a class="btn ghost" href="chat.html">Public Chat</a>
+      <a class="btn ghost" href="crew.html" title="Flight Crew access">Flight Crew</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-copy">
+        <h1 class="heading">Starducks</h1>
+        <p class="tagline">An art‑y, vintage‑galaxy journal. Read, drift, and take a Flight ✈︎</p>
+        <div class="hero-cta">
+          <a class="btn solid big" href="login.html">Join</a>
+          <a class="btn outline big" href="chat.html">PUBLIC CHAT</a>
+        </div>
+      </div>
+      <div class="song-tile" id="songTile" title="Tap to play on YouTube">
+        <!-- NewJeans‑ish symbol (custom SVG), not labeled 'Song of the day' -->
+        <svg viewBox="0 0 200 200" class="song-symbol" aria-hidden="true">
+          <defs>
+            <filter id="glow"><feGaussianBlur stdDeviation="2" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <g filter="url(#glow)">
+            <path d="M60 40 C50 15, 15 15, 25 55 C35 95, 60 110, 60 130 C60 110, 85 95, 95 55 C105 15, 70 15, 60 40 Z" fill="none" stroke="currentColor" stroke-width="3"/>
+            <path d="M140 40 C130 15, 95 15, 105 55 C115 95, 140 110, 140 130 C140 110, 165 95, 175 55 C185 15, 150 15, 140 40 Z" fill="none" stroke="currentColor" stroke-width="3"/>
+            <circle cx="100" cy="150" r="6" fill="currentColor"/>
+            <circle cx="120" cy="165" r="3" fill="currentColor"/>
+            <circle cx="80" cy="170" r="2" fill="currentColor"/>
+          </g>
+        </svg>
+        <div class="song-thumb" id="songThumb" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- World Clock -->
+    <section class="panel clock-panel">
+      <h2 class="subheading">World Time</h2>
+      <div id="clockGrid" class="clock-grid" data-cities='[
+        {"name":"NYC","tz":"America/New_York"},
+        {"name":"Bangkok","tz":"Asia/Bangkok"},
+        {"name":"Tokyo","tz":"Asia/Tokyo"},
+        {"name":"LA","tz":"America/Los_Angeles"},
+        {"name":"London","tz":"Europe/London"}
+      ]'></div>
+    </section>
+
+    <!-- Crew Showcase (flags) -->
+    <section class="panel crew-panel" id="crewShowcase" hidden>
+      <h2 class="subheading">Flight Crew</h2>
+      <div class="crew-list" id="crewList"></div>
+    </section>
+
+    <!-- Feed preview -->
+    <section class="panel feed-panel" id="feedPreview">
+      <h2 class="subheading">Latest Posts</h2>
+      <div id="postFeed" class="feed"></div>
+      <div class="center mt-24">
+        <a class="btn outline" href="feed.html">View all</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-left">
+      <small class="credit">Design by Uefa Chankarn</small>
+    </div>
+    <div class="footer-right">
+      <a href="set-song.html" class="tiny-link" title="requires code 2626">Song</a>
+      <span>•</span>
+      <a href="crew.html" class="tiny-link">Crew Access</a>
+      <span>•</span>
+      <a href="about.html" class="tiny-link">About</a>
+    </div>
+  </footer>
+</body>
+</html>

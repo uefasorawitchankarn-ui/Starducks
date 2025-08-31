@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile — Starducks</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="js/app.js"></script>
+  <script defer src="js/profile.js"></script>
+</head>
+<body class="theme-galaxy">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="grain"></div>
+  <header class="site-header simple">
+    <a class="logo" href="index.html"><img src="assets/logo.svg" alt="Starducks"></a>
+  </header>
+
+  <main class="container narrow">
+    <h1 class="heading">Profile & Country</h1>
+    <div class="card">
+      <form id="profileForm" class="form-grid">
+        <label>Display name
+          <input name="name" required>
+        </label>
+        <label>Country
+          <select name="country" id="countrySelect"></select>
+        </label>
+        <div class="row gap-12 ai-center">
+          <label class="upload">
+            <input type="file" id="avatarInput" accept="image/*" hidden>
+            <span class="btn ghost">Upload profile photo</span>
+          </label>
+          <div class="avatar" id="avatarPreview"></div>
+        </div>
+        <button class="btn solid mt-12">Save</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <small class="credit">Design by Uefa Chankarn</small>
+  </footer>
+</body>
+</html>
